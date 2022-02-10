@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_item">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
 
     <ImageView
         android:id="@+id/control_btn"
@@ -11,9 +19,31 @@
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:src="@drawable/icon_play"
+        android:src="@drawable/icon_play1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription= "@string/play_or_pause" />
+
+    <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription= "@string/play_or_pause" />
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="20sp"
+        android:text="Puk N1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:paddingEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:text="10:00 PM"/>
 
 </RelativeLayout>

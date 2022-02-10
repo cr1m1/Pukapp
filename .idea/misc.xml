@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sulpak/AndroidStudioProjects/Pukapp/app/src/main/res/drawable/rounded_item.xml" value="0.1335" />
+        <entry key="..\:/Users/sulpak/AndroidStudioProjects/Pukapp/app/src/main/res/layout-v28/list_item.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/sulpak/AndroidStudioProjects/Pukapp/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/sulpak/AndroidStudioProjects/Pukapp/app/src/main/res/layout/list_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/sulpak/AndroidStudioProjects/Pukapp/app/src/main/res/layout/list_item.xml" value="0.16" />
       </map>
     </option>
   </component>
