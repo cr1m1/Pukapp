@@ -1,4 +1,4 @@
-package com.example.pukapp
+package com.example.pukapp.model
 
 data class Recording(
     var id: Int,

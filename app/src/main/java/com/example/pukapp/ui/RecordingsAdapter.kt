@@ -1,4 +1,4 @@
-package com.example.pukapp
+package com.example.pukapp.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pukapp.R
+import com.example.pukapp.model.Recording
 import java.text.SimpleDateFormat
 
 class RecordingsAdapter: RecyclerView.Adapter<RecordingsAdapter.ViewHolder>() {
