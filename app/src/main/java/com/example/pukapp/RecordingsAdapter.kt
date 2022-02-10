@@ -43,7 +43,8 @@ class RecordingsAdapter: RecyclerView.Adapter<RecordingsAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.title.text = list[position].title
-        val date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse(list[position].createdAt)
+        val date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+            .parse(list[position].createdAt)
         holder.time.text = date.toString()
     }
 

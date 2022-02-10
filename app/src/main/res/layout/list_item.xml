@@ -16,13 +16,13 @@
 
     <ImageView
         android:id="@+id/control_btn"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:src="@drawable/icon_play1"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:contentDescription= "@string/play_or_pause" />
 
     <TextView
