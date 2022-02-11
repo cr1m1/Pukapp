@@ -16,7 +16,7 @@ import java.time.format.DateTimeFormatter
 
 class RecordingsAdapter: RecyclerView.Adapter<RecordingsAdapter.ViewHolder>() {
 
-//    val list = mutableListOf<Recording>(
+//    var list = listOf<Recording>(
 //        Recording(1,
 //            "123",
 //            "2022-02-10T12:26:48.104926Z",
@@ -31,9 +31,9 @@ class RecordingsAdapter: RecyclerView.Adapter<RecordingsAdapter.ViewHolder>() {
 //            "2022-02-10T12:26:48.104926Z")
 //    )
 
-    var list = mutableListOf<Recording>()
+    var list = listOf<Recording>()
 
-    fun setData(data: MutableList<Recording>){
+    fun setData(data: List<Recording>){
         this.list = data
         notifyDataSetChanged()
     }

@@ -1,7 +1,8 @@
 package com.example.pukapp.repo
 
+import com.example.pukapp.api.RetrofitInstance
 import com.example.pukapp.api.ServiceApi
 
 class MainActivityRepository {
-    fun getAllRecordings() = ServiceApi.create()
+  suspend fun getRecordings() = RetrofitInstance.api.getRecordings()
 }

@@ -1,5 +1,10 @@
 package com.example.pukapp.model
 
+data class Result(
+    var data: Data,
+    var pagination: Pagination
+)
+
 data class Recording(
     var id: Int,
     var audioURL: String,
@@ -7,16 +12,11 @@ data class Recording(
     var updatedAt: String
 )
 
-data class Response(
-    val pagination: Pagination,
-    val data: Data
+data class Pagination(
+    var next: String,
+    var back: String
 )
 
 data class Data(
-    val puks: List<Recording>
-)
-
-data class Pagination(
-    val next: String,
-    val back: String
+    var puks: List<Recording>
 )
