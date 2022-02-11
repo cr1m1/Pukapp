@@ -9,11 +9,7 @@ import com.example.pukapp.ui.MainViewModel as PukappUiViewModel
 class ViewModelProviderFactory constructor(private val repository: MainActivityRepository) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-      return if (modelClass.isAssignableFrom(PukappUiViewModel::class.java)) {
-          PukappUiViewModel(this.repository) as T
-      }else{
-          throw IllegalArgumentException("view model error")
-      }
+      return PukappUiViewModel(repository) as T
     }
 
 }
