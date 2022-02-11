@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pukapp.R
 import com.example.pukapp.model.Recording
 import com.example.pukapp.utils.getAbbreviatedFromDateTime
+import com.example.pukapp.utils.mediaPlayer
+import com.example.pukapp.utils.pauseAudio
+import com.example.pukapp.utils.playAudio
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -39,7 +42,7 @@ class RecordingsAdapter: RecyclerView.Adapter<RecordingsAdapter.ViewHolder>() {
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
-        val imageView: ImageView = view.findViewById(R.id.control_btn)
+        var imageView: ImageView = view.findViewById(R.id.control_btn)
         val title: TextView = view.findViewById(R.id.title)
         val time: TextView = view.findViewById(R.id.time)
     }
@@ -57,6 +60,24 @@ class RecordingsAdapter: RecyclerView.Adapter<RecordingsAdapter.ViewHolder>() {
             list[position].createdAt,
             "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
             "MM d, h:mm a")
+
+        var isPlay = false
+        holder.imageView.setOnClickListener {
+            if (isPlay) {
+                holder.imageView.setImageResource(R.drawable.icon_play)
+                pauseAudio()
+                isPlay = false
+            } else {
+                holder.imageView.setImageResource(R.drawable.icon_pause)
+                playAudio(list[position].audioURL)
+                isPlay = true
+            }
+        }
+
+        mediaPlayer.setOnCompletionListener {
+            holder.imageView.setImageResource(R.drawable.icon_play)
+            isPlay = false
+        }
     }
 
     override fun getItemCount(): Int {
